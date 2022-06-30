@@ -1,0 +1,8 @@
+sample_toolbar.toolbar.settings_form:
+  path: '/admin/config/ibm/sample_reports_toolbar'
+  defaults:
+    _form: '\Drupal\sample_toolbar\Form\sampleToolbarSettingsForm'
+    _title: 'sample Reports Toolbar Settings'
+  requirements:
+    _permission: 'administer sample reports configuration'
+    _module_dependencies: 'toolbar'

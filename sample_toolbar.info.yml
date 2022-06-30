@@ -1,0 +1,12 @@
+name: 'Sample Toolbar Module'
+type: module
+description: 'Enabling will make changes to Drupals default toolbar'
+# core: 8.x
+package: Drupal
+dependencies:
+  - toolbar
+
+# Information added by Drupal.org packaging script on 2016-04-10
+version: '1'
+core: '8.x'
+core_version_requirement: ^8 || ^9

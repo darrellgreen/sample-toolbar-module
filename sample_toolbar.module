@@ -1,0 +1,33 @@
+<?php
+
+
+use Drupal\sample_toolbar\sampleToolbarHandler;
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function sample_toolbar_element_info_alter(array &$types) {
+  // Attach our extra CSS for toolbar icons.
+  if (isset($types['toolbar'])) {
+    $types['toolbar']['#attached']['library'][] = 'sample_toolbar/toolbar';
+  }
+}
+
+/**
+ * Implements hook_toolbar().
+ * Keeping this commented as it might be helpful for us in the future.
+ * Basically this hook allow us to create new buttons and add them into
+ * The toolbar instead of modifying existing ones. Here's an example
+ */
+function sample_toolbar_toolbar() {
+  return \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(sampleToolbarHandler::class)
+    ->toolbar();
+}
+
+function sample_toolbar_toolbar_alter(&$items) {
+  $items['home']['tab']['#attributes']['class'] = ['toolbar-icon', 'toolbar-icon-my-home'];
+  //Overwritting wrapper class so this button doesn't get hidden at any time
+  $items['home']['#wrapper_attributes']['class'] = ['myhome-home-toolbar-tab'];
+
+}

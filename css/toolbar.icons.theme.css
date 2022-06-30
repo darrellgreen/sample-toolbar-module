@@ -1,0 +1,36 @@
+
+.toolbar .toolbar-icon-my-home:before {
+  background-image: url(../misc/icons/bebebe/house.svg);
+}
+/* [dir="rtl"] .toolbar .toolbar-icon-escape-admin:before {
+  background-image: url(../../../misc/icons/bebebe/chevron-disc-right.svg);
+} */
+
+
+.toolbar-icon-my-home:active:before,
+.toolbar-icon-my-home.is-active:before {
+  background-image: url(../misc/icons/bebebe/house.svg);
+}
+
+
+.toolbar .toolbar-icon-feedback:before {
+  background-image: url(../misc/icons/bebebe/comment.svg);
+}
+/* [dir="rtl"] .toolbar .toolbar-icon-escape-admin:before {
+  background-image: url(../../../misc/icons/bebebe/chevron-disc-right.svg);
+} */
+
+
+.toolbar-icon-feedback:active:before,
+.toolbar-icon-feedback.is-active:before {
+  background-image: url(../misc/icons/bebebe/comment.svg);
+}
+
+.toolbar .toolbar-icon-reports:before {
+  background-image: url(../misc/icons/bebebe/report.png);
+}
+
+.toolbar-icon-reports:active:before,
+.toolbar-icon-reports.is-active:before {
+  background-image: url(../misc/icons/bebebe/report.png);
+}
